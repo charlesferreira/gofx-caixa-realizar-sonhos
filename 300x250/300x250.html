@@ -194,10 +194,41 @@
       width: 300px;
       height: 250px;
     }
-  </style><script data-source="googbase_min.js" data-version="4" data-exports-type="googbase" src="googbase_min.js"></script><script data-source="gwd_webcomponents_min.js" data-version="5" data-exports-type="gwd_webcomponents" src="gwd_webcomponents_min.js"></script>
+  </style>
+  <link href="../Common/Ad.css" rel="stylesheet">
+  <script type="text/javascript" src="../Common/Ad.js"></script><script data-source="googbase_min.js" data-version="4" data-exports-type="googbase" src="googbase_min.js"></script><script data-source="gwd_webcomponents_min.js" data-version="5" data-exports-type="gwd_webcomponents" src="gwd_webcomponents_min.js"></script>
   <script
   data-source="gwdpage_min.js" data-version="8" data-exports-type="gwd-page" src="gwdpage_min.js"></script><script data-source="gwdpagedeck_min.js" data-version="9" data-exports-type="gwd-pagedeck" src="gwdpagedeck_min.js"></script><script data-source="gwdgenericad_min.js" data-version="4" data-exports-type="gwd-genericad" src="gwdgenericad_min.js"></script>
-    <script data-source="gwdimage_min.js" data-version="9" data-exports-type="gwd-image" src="gwdimage_min.js"></script>
+    <script
+    data-source="gwdimage_min.js" data-version="9" data-exports-type="gwd-image" src="gwdimage_min.js"></script>
+      <script type="text/javascript" gwd-events="support" src="gwd-events-support.1.0.js"></script>
+      <script type="text/javascript" gwd-events="handlers">
+        window.gwd = window.gwd || {};
+        gwd.init = function(event) {
+          gwd.ad = new Ad({
+            width: 300,
+            height: 250
+          });
+        };
+        gwd.auto_OverlayClick = function(event) {
+          // GWD Predefined Function
+          gwd.actions.events.setInlineStyle('overlay-img', 'transition: all 2s linear; opacity: 0;');
+        };
+      </script>
+      <script type="text/javascript" gwd-events="registration">
+        // Support code for event handling in Google Web Designer
+         // This script block is auto-generated. Please do not edit!
+        gwd.actions.events.registerEventHandlers = function(event) {
+          gwd.actions.events.addHandler('document.body', 'adinitialized', gwd.init, false);
+          gwd.actions.events.addHandler('overlay', 'click', gwd.auto_OverlayClick, false);
+        };
+        gwd.actions.events.deregisterEventHandlers = function(event) {
+          gwd.actions.events.removeHandler('document.body', 'adinitialized', gwd.init, false);
+          gwd.actions.events.removeHandler('overlay', 'click', gwd.auto_OverlayClick, false);
+        };
+        document.addEventListener("DOMContentLoaded", gwd.actions.events.registerEventHandlers);
+        document.addEventListener("unload", gwd.actions.events.deregisterEventHandlers);
+      </script>
 </head>
 
 <body>
