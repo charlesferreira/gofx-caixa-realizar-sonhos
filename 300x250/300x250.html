@@ -272,13 +272,13 @@
         // Support code for event handling in Google Web Designer
          // This script block is auto-generated. Please do not edit!
         gwd.actions.events.registerEventHandlers = function(event) {
-          gwd.actions.events.addHandler('document.body', 'adinitialized', gwd.init, false);
+          gwd.actions.events.addHandler('page1', 'pagepresenting', gwd.init, false);
           gwd.actions.events.addHandler('arr-right-btn', 'click', gwd.onRightArrowClick, false);
           gwd.actions.events.addHandler('arr-left-btn', 'click', gwd.onLeftArrowClick, false);
           gwd.actions.events.addHandler('interaction', 'click', gwd.cta, false);
         };
         gwd.actions.events.deregisterEventHandlers = function(event) {
-          gwd.actions.events.removeHandler('document.body', 'adinitialized', gwd.init, false);
+          gwd.actions.events.removeHandler('page1', 'pagepresenting', gwd.init, false);
           gwd.actions.events.removeHandler('arr-right-btn', 'click', gwd.onRightArrowClick, false);
           gwd.actions.events.removeHandler('arr-left-btn', 'click', gwd.onLeftArrowClick, false);
           gwd.actions.events.removeHandler('interaction', 'click', gwd.cta, false);
