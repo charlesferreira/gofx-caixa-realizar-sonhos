@@ -4,13 +4,14 @@ var Ad = function(options) {
         height: 250,
         numPictures: 4,
         frameDuration: 1100,
-        arrowOpacityOn: 0.825,
-        arrowOpacityOff: 0.53,
+        arrowOpacityOn: 0.85,
+        arrowOpacityOff: 0.4,
         autoPlayTimeOut: 5000,
         autoPlayInterval: 2500,
         autoPlayMaxTimeOut: 20000,
         effects: {
             overlayFadeOut: { transition: '0.5s ease-in', delay: 2000 },
+            overlayMaskFadeOut: { transition: '0.5s ease-in-out'},
             arrowsSlideIn: { transition: '1.0s ease-out', delay: 1500 },
             arrowsSlideOut: { transition: '1.0s ease-in' },
             arrowLeftFade: { transition: '0.5s ease-out' },
@@ -187,6 +188,7 @@ Ad.prototype.slideOutArrows = function() {
 
 Ad.prototype.playLastFrame = function() {
     return this
+        .fadeOut('overlay-mask', this.effects.overlayMaskFadeOut)
         .fadeOut('underlay-txt', this.effects.underlayCrossFade)
         .fadeIn('underlay-logo', this.effects.underlayCrossFade);
 }
