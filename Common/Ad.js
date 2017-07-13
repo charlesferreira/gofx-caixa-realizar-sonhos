@@ -19,7 +19,8 @@ var Ad = function(options) {
             framePhotoSlideOut: { transition: '0.8s ease-in-out' },
             frameTextSlideIn: { transition: '0.4s ease-out', delay: 600 },
             frameTextSlideOut: { transition: '0.35s ease-in' },
-            underlayCrossFade: { transition: '0.5s ease-in-out', delay: 2500 }
+            underlayTextFadeOut: { transition: '0.5s ease-in-out', delay: 2500 },
+            underlayLogoFadeIn: { transition: '0.5s ease-in-out', delay: 3000 },
         },
     }).start();
 }
@@ -189,6 +190,6 @@ Ad.prototype.slideOutArrows = function() {
 Ad.prototype.playLastFrame = function() {
     return this
         .fadeOut('overlay-mask', this.effects.overlayMaskFadeOut)
-        .fadeOut('underlay-txt', this.effects.underlayCrossFade)
-        .fadeIn('underlay-logo', this.effects.underlayCrossFade);
+        .fadeOut('underlay-txt', this.effects.underlayTextFadeOut)
+        .fadeIn('underlay-logo', this.effects.underlayLogoFadeIn);
 }
