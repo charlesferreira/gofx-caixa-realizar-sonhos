@@ -184,14 +184,23 @@
     }
     .gwd-img-1bd2 {
       transform-style: preserve-3d;
-      transform: scale3d(-1, 1, 1);
       left: 0px;
+      width: 150px;
+      transform: scale3d(-1, 1, 1);
     }
     .gwd-div-1kdt {
       position: absolute;
       left: 0px;
       top: 0px;
       width: 300px;
+      height: 250px;
+    }
+    .gwd-img-1q4p {}
+    .gwd-div-10ea {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 150px;
       height: 250px;
     }
   </style>
@@ -210,21 +219,15 @@
             height: 250
           });
         };
-        gwd.auto_OverlayClick = function(event) {
-          // GWD Predefined Function
-          gwd.actions.events.setInlineStyle('overlay-img', 'transition: all 2s linear; opacity: 0;');
-        };
       </script>
       <script type="text/javascript" gwd-events="registration">
         // Support code for event handling in Google Web Designer
          // This script block is auto-generated. Please do not edit!
         gwd.actions.events.registerEventHandlers = function(event) {
           gwd.actions.events.addHandler('document.body', 'adinitialized', gwd.init, false);
-          gwd.actions.events.addHandler('overlay', 'click', gwd.auto_OverlayClick, false);
         };
         gwd.actions.events.deregisterEventHandlers = function(event) {
           gwd.actions.events.removeHandler('document.body', 'adinitialized', gwd.init, false);
-          gwd.actions.events.removeHandler('overlay', 'click', gwd.auto_OverlayClick, false);
         };
         document.addEventListener("DOMContentLoaded", gwd.actions.events.registerEventHandlers);
         document.addEventListener("unload", gwd.actions.events.deregisterEventHandlers);
@@ -237,27 +240,29 @@
       <div is="gwd-page" id="page1" class="gwd-page-wrapper gwd-page-size gwd-lightbox" data-gwd-width="300px" data-gwd-height="250px">
         <div class="gwd-page-content gwd-page-size">
           <img is="gwd-image" source="assets/bg02.jpg" id="backgorund" class="gwd-img-11ae" data-gwd-tl-locked="">
-          <div class="gwd-div-1jf6" id="underlay">
+          <div class="gwd-div-1jf6" id="underlay" data-gwd-tl-locked="">
             <img is="gwd-image" source="assets/txt06.png" id="underlay-txt" class="gwd-img-1urj">
             <img is="gwd-image" source="assets/logo.png" id="logo" class="gwd-img-wbc8" data-gwd-tl-hidden="">
           </div>
           <div class="gwd-div-y56q" id="pictures">
             <img is="gwd-image" source="assets/img01.jpg" id="pic-0" class="gwd-img-16xz">
-            <img is="gwd-image" source="assets/img02.jpg" id="pic-1" class="gwd-img-payl" data-gwd-tl-hidden="">
-            <img is="gwd-image" source="assets/img03.jpg" id="pic-2" class="gwd-img-16ai" data-gwd-tl-hidden="">
-            <img is="gwd-image" source="assets/img04.jpg" id="pic-3" class="gwd-img-1j0x" data-gwd-tl-hidden="">
+            <img is="gwd-image" source="assets/img02.jpg" id="pic-1" class="gwd-img-payl">
+            <img is="gwd-image" source="assets/img03.jpg" id="pic-2" class="gwd-img-16ai">
+            <img is="gwd-image" source="assets/img04.jpg" id="pic-3" class="gwd-img-1j0x">
           </div>
-          <div class="gwd-div-1usj" id="texts">
+          <div class="gwd-div-1usj" id="texts" data-gwd-tl-locked="">
             <img is="gwd-image" source="assets/txt02.png" id="txt-0" class="gwd-img-1oad">
-            <img is="gwd-image" source="assets/txt03.png" id="txt-1" class="gwd-img-6da9" data-gwd-tl-hidden="">
-            <img is="gwd-image" source="assets/txt04.png" id="txt-2" class="gwd-img-l8a1" data-gwd-tl-hidden="">
-            <img is="gwd-image" source="assets/txt05.png" id="txt-3" class="gwd-img-1ocp" data-gwd-tl-hidden="">
+            <img is="gwd-image" source="assets/txt03.png" id="txt-1" class="gwd-img-6da9">
+            <img is="gwd-image" source="assets/txt04.png" id="txt-2" class="gwd-img-l8a1">
+            <img is="gwd-image" source="assets/txt05.png" id="txt-3" class="gwd-img-1ocp">
           </div>
-          <div class="gwd-div-1kdt" id="arrows" data-gwd-tl-hidden="">
-            <img is="gwd-image" source="assets/seta.png" id="arr-right" class="gwd-img-rf3d">
-            <img is="gwd-image" source="assets/seta.png" id="arr-left" class="gwd-img-rf3d gwd-img-1bd2">
+          <div class="gwd-div-1kdt" id="arrows">
+            <img is="gwd-image" source="assets/seta.png" id="arr-right" class="gwd-img-rf3d gwd-img-1q4p">
+            <div class="gwd-div-10ea" id="arr-left">
+              <img is="gwd-image" source="assets/seta.png" class="gwd-img-rf3d gwd-img-1bd2 gwd-gen-e3efgwdanimation">
+            </div>
           </div>
-          <div class="gwd-div-dwb3" id="overlay">
+          <div class="gwd-div-dwb3" id="overlay" data-gwd-tl-locked="">
             <img is="gwd-image" source="assets/bg02.jpg" id="overlay-img" class="gwd-img-1696">
             <img is="gwd-image" source="assets/txt01.png" id="overlay-txt" class="gwd-img-htne gwd-gen-979egwdanimation">
           </div>
